@@ -2,7 +2,7 @@
 //!
 //! URL: https://leetcode.com/problems/first-missing-positive/
 //!
-//! Submission: 100% runtime, 18% memory
+//! Submission: 100% runtime
 
 struct Solution{}
 impl Solution {
