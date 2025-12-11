@@ -3,7 +3,7 @@
 //! URL: https://leetcode.com/problems/move-zeroes/description/
 //!
 //! Submission: 100% runtime, 15.83% memory
-struct Solution{}
+struct Solution {}
 impl Solution {
     pub fn move_zeroes(nums: &mut Vec<i32>) {
         let mut left = 0;
@@ -19,7 +19,7 @@ impl Solution {
 }
 #[test]
 fn test1() {
-    let mut nums = vec![0,1,0,3,12];
+    let mut nums = vec![0, 1, 0, 3, 12];
     Solution::move_zeroes(&mut nums);
-    println!("{:?}",nums);
+    println!("{:?}", nums);
 }
