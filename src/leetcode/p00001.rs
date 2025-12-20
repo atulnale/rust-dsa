@@ -6,8 +6,8 @@ impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let mut map = HashMap::new();
         for (i,num) in nums.iter().enumerate() {
-            if map.contains_key(&(target - num)) {
-                return vec![i as i32, *map.get(&(target - num)).unwrap()];
+            if let Some(&x) = map.get(&(target - num)) {
+                return vec![x, i as i32];
             }
             map.insert(num, i as i32);
         }
