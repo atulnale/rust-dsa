@@ -1,11 +1,10 @@
-
-struct Solution{}
+struct Solution {}
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
         let mut map: std::collections::HashMap<char, usize> = std::collections::HashMap::new();
-        let mut i:usize = 0;
+        let mut i: usize = 0;
         let mut ans = 0;
-        for (j,ele) in s.chars().enumerate() {
+        for (j, ele) in s.chars().enumerate() {
             if let Some(&x) = map.get(&ele) {
                 if x >= i {
                     i = x + 1;

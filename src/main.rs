@@ -1,9 +1,13 @@
-use std::{fs::{File, OpenOptions}, io::Write, path::PathBuf};
+use std::{
+    fs::{File, OpenOptions},
+    io::Write,
+    path::PathBuf,
+};
 
 mod arrays;
 mod binary_search;
-mod linked_list;
 mod leetcode;
+mod linked_list;
 
 fn main() {
     let inputs: Vec<String> = std::env::args().collect();
@@ -21,10 +25,8 @@ fn main() {
         .join("src")
         .join("leetcode");
 
-
     // Create leetcode/<file>.rs
-    File::create(path.join(&file_name))
-        .expect("Failed to create file");
+    File::create(path.join(&file_name)).expect("Failed to create file");
 
     // Open mod.rs in append mode
     let mut mod_file = OpenOptions::new()
