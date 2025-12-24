@@ -6,10 +6,10 @@ impl Solution {
         }
         let mut ans: Vec<char> = Vec::new();
         let chars: Vec<char> = s.chars().collect();
-        
-        let incr = ((num_rows - 1)*2) - 1;
+
+        let incr = ((num_rows - 1) * 2) - 1;
         let mut l = incr;
-    
+
         for i in 0..num_rows {
             let mut j = i;
             while j < chars.len() as i32 {
@@ -17,11 +17,10 @@ impl Solution {
                 if l > 0 && l < incr && ((j as usize + l as usize + 1) < chars.len()) {
                     ans.push(chars[(j + l + 1) as usize]);
                 }
-                
-                
+
                 j = j + incr + 1;
             }
-            l -=2;
+            l -= 2;
         }
         return ans.into_iter().collect();
     }
