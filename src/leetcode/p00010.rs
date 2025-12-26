@@ -10,7 +10,8 @@ impl Solution {
         }
         let is_char_match = i != s.len() && (s[i] == p[j] || p[j] == '.');
         if j + 1 < p.len() && p[j + 1] == '*' {
-            return Self::is_regex_match(s, p, i, j + 2) || (is_char_match && Self::is_regex_match(s, p, i + 1, j));
+            return Self::is_regex_match(s, p, i, j + 2)
+                || (is_char_match && Self::is_regex_match(s, p, i + 1, j));
         }
         return is_char_match && Self::is_regex_match(s, p, i + 1, j + 1);
     }
@@ -88,7 +89,10 @@ mod tests {
     fn test9() {
         assert_eq!(
             false,
-            Solution::is_match(String::from("aaaaaaaaaaaaaaaaaaab"), String::from("a*a*a*a*a*a*a*a*a*a*"))
+            Solution::is_match(
+                String::from("aaaaaaaaaaaaaaaaaaab"),
+                String::from("a*a*a*a*a*a*a*a*a*a*")
+            )
         );
     }
 }

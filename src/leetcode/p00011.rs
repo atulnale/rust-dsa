@@ -1,8 +1,8 @@
-struct Solution{}
-impl Solution { 
+struct Solution {}
+impl Solution {
     pub fn max_area(height: Vec<i32>) -> i32 {
         let mut i = 0;
-        let mut j = height.len()-1;
+        let mut j = height.len() - 1;
         let mut ans = 0;
         while i < j {
             let temp = (j - i) as i32 * height[i].min(height[j]);
@@ -25,6 +25,6 @@ mod tests {
     use crate::leetcode::p00011::Solution;
     #[test]
     fn test1() {
-        assert_eq!(49, Solution::max_area(vec![1,8,6,2,5,4,8,3,7]));
+        assert_eq!(49, Solution::max_area(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]));
     }
 }
