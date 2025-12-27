@@ -1,4 +1,4 @@
-struct Solution{}
+struct Solution {}
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
         if strs.len() == 0 {
@@ -21,12 +21,16 @@ impl Solution {
 }
 
 #[cfg(test)]
-mod tests{
+mod tests {
     use crate::leetcode::p00014::Solution;
 
     #[test]
     fn test1() {
-        let strs = vec![String::from("flower"),"flow".to_string(),"flight".to_string()];
+        let strs = vec![
+            String::from("flower"),
+            "flow".to_string(),
+            "flight".to_string(),
+        ];
         assert_eq!("fl".to_string(), Solution::longest_common_prefix(strs));
     }
 }
