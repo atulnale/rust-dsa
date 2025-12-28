@@ -5,9 +5,21 @@ impl Solution {
         let mut stack: Vec<char> = Vec::new();
         for i in 0..arr.len() {
             match arr[i] {
-                ']' => { if Some('[') != stack.pop() {return false;}}
-                '}' => {if Some('{') != stack.pop() {return false;}}
-                ')' => {if Some('(') != stack.pop() {return false;}}
+                ']' => {
+                    if Some('[') != stack.pop() {
+                        return false;
+                    }
+                }
+                '}' => {
+                    if Some('{') != stack.pop() {
+                        return false;
+                    }
+                }
+                ')' => {
+                    if Some('(') != stack.pop() {
+                        return false;
+                    }
+                }
                 _ => stack.push(arr[i]),
             }
         }
