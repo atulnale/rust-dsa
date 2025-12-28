@@ -33,8 +33,8 @@ mod tests {
 
     #[test]
     fn test1() {
-        let list1 = ListNode::build(vec![1,2,3]);
-        let list2 = ListNode::build(vec![1,3,4]);
+        let list1 = ListNode::build(vec![1, 2, 3]);
+        let list2 = ListNode::build(vec![1, 3, 4]);
         let head = Solution::merge_two_lists(list1, list2);
         ListNode::display(&head);
     }
