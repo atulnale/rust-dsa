@@ -1,4 +1,4 @@
-struct Solution{}
+struct Solution {}
 impl Solution {
     pub fn generate_parenthesis(n: i32) -> Vec<String> {
         let mut ans: Vec<String> = Vec::new();
@@ -11,14 +11,13 @@ impl Solution {
             return;
         }
         if o > 0 {
-            Self::paran(o-1, c, format!("{}{}",curr, "("), res);
+            Self::paran(o - 1, c, format!("{}{}", curr, "("), res);
         }
         if c > 0 && c > o {
-            Self::paran(o, c-1, format!("{}{}",curr, ")"), res);
+            Self::paran(o, c - 1, format!("{}{}", curr, ")"), res);
         }
     }
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -26,6 +25,9 @@ mod tests {
 
     #[test]
     fn test1() {
-        assert_eq!(vec!["((()))","(()())","(())()","()(())","()()()"], Solution::generate_parenthesis(3));
+        assert_eq!(
+            vec!["((()))", "(()())", "(())()", "()(())", "()()()"],
+            Solution::generate_parenthesis(3)
+        );
     }
 }

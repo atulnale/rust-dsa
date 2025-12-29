@@ -4,6 +4,17 @@ pub struct ListNode {
     pub next: Option<Box<ListNode>>,
 }
 
+impl Ord for ListNode {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        other.val.cmp(&self.val)
+    }
+}
+
+impl PartialOrd for ListNode {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.cmp(other)) // use Ord's cmp
+    }
+}
 impl ListNode {
     #[inline]
     pub fn new(val: i32) -> Self {
