@@ -26,7 +26,7 @@ fn test1() {
 #[test]
 fn test2() {
     let s = "abcabcbb".to_string();
-    assert_eq!(2, Solution::length_of_longest_substring(s));
+    assert_eq!(3, Solution::length_of_longest_substring(s));
 }
 
 #[test]

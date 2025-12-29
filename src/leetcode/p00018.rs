@@ -60,7 +60,7 @@ mod tests {
     #[test]
     fn test2() {
         assert_eq!(
-            vec![vec![0]],
+            Vec::<Vec<i32>>::new(),
             Solution::four_sum(
                 vec![1000000000, 1000000000, 1000000000, 1000000000],
                 -294967296

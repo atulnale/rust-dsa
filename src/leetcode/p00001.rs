@@ -17,5 +17,5 @@ impl Solution {
 #[test]
 fn test1() {
     let ans = Solution::two_sum(vec![2, 7, 11, 15], 9);
-    assert_eq!(ans, vec![1, 0]);
+    assert_eq!(ans, vec![0, 1]);
 }
